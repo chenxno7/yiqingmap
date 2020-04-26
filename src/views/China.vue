@@ -8,8 +8,8 @@
       <total v-for="(total,i) of totals" :key="i" :total="total"></total>
     </div>
     <div class="nav">
-      <a href="javascript:;" :class="{active:showNow}" @click="changeData(true)">现存确诊</a>
-      <a href="javascript:;" :class="{active:!showNow}" @click="changeData(false)">累计确诊</a>
+      <a href="javascript:;" :class="{active:showNow}" @click="showNow=true">现存确诊</a>
+      <a href="javascript:;" :class="{active:!showNow}" @click="showNow=(false)">累计确诊</a>
     </div>
     <p class="title">疫情地图</p>
     <map-china :showNow="showNow"></map-china>
@@ -50,9 +50,6 @@ export default {
     }
   },
   methods:{
-    changeData(bool){
-      this.showNow=bool
-    },
     totalPush(title,num,add,color){
       this.totals.push({
         title:title,

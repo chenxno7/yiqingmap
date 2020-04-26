@@ -2,8 +2,7 @@
   <div id="app">
     <div id="nav" :class="{fixed}">
       <router-link to="/">国内疫情</router-link> |
-      <router-link to="/world">国际疫情</router-link>|
-      <router-link to="/map">实时资讯</router-link>
+      <router-link to="/world">国际疫情</router-link>
     </div>
     <router-view/>
   </div>

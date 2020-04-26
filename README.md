@@ -1,19 +1,4 @@
-# yiqing
+# 疫情地图
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 简介
+本项目是借助`Vue`脚手架开发的一个关于本次新型冠状病毒疫情相关数据展示的`SPA`应用。主要借助`ECharts`来完成对本次疫情数据的页面渲染，将疫情数据以可视化的形式展示出来，让用户直观地去了解本次疫情的动态及走向。
