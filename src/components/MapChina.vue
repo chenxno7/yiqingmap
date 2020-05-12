@@ -23,6 +23,8 @@ a{
 import echarts from 'echarts'
 import 'echarts/map/js/china'
 import jsonp from 'jsonp'
+import {mapState} from 'vuex'
+
 export default {
     data(){
         return {
@@ -34,11 +36,18 @@ export default {
     props:["showNow"],
     mounted(){
         this.getData();
+        console.log('拿到了vuex的数据哈哈',this.data)
     },
     watch:{
         showNow(){
             this.init();
+        },
+        data(){
+            console.log(this.data)
         }
+    },
+    computed:{
+        ...mapState(['data'])
     },
     methods:{
         init(){
@@ -57,7 +66,7 @@ export default {
                     trigger:"item",
                     enterable:true,
                     triggerOn:'click',
-                    formatter:`地区：{b}<br>${title}：{c}<br><a href="http://www.baidu.com" style="text-decoration:none;color:#fff">更多详情&gt;</a>`
+                    formatter:`地区：{b}<br>${title}：{c}`
                 },
                 series:[
                     {

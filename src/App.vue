@@ -10,11 +10,16 @@
 
 <script>
 
+import {mapActions} from 'vuex'
+
 export default {
   data(){
     return {
       fixed:false,
     }
+  },
+  methods:{
+    ...mapActions(['getData'])
   },
   mounted(){
     var offset=document.getElementById('nav').offsetTop;
@@ -22,6 +27,7 @@ export default {
       var scrollTop=window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop;
       this.fixed=scrollTop>offset
     })
+    this.getData();
   }
 }
 </script>

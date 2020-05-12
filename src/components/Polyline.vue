@@ -82,7 +82,7 @@ export default {
         this.getData();
         window.addEventListener('resize',()=>{
             this.init();
-            console.log('giao')
+            // console.log('giao')
         })
     },
     watch:{
